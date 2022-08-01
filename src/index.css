@@ -1,13 +1,364 @@
+/*
+Default Style
+============================*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Merriweather:wght@300;400;500;700&display=swap");
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: "Open Sans", sans-serif;
+  color: #212529;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #071c07;
 }
+
+a:hover {
+  text-decoration: none;
+  color: #252a26;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+button {
+  outline: 0 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #252a26;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 19px;
+  line-height: 1.5;
+  overflow: hidden;
+  display: block;
+  -webkit-line-clamp: 2;
+  display: box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-control {
+  height: 50px;
+  color: #252a26;
+  border: 1px solid #e8e8e8;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  font-size: 15px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #495057;
+  font-size: 13px;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #495057;
+  font-size: 13px;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #495057;
+  font-size: 13px;
+}
+
+.form-control::placeholder {
+  color: #495057;
+  font-size: 13px;
+}
+
+.form-control:focus {
+  color: #000000;
+  background-color: transparent;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  outline: 0;
+  border: 1px solid #008037;
+}
+
+.form-control:hover:focus,
+.form-control:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+textarea.form-control {
+  height: auto;
+  height: 250px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.ptb-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.bg-color {
+  background: #f5faff;
+}
+
+/** Box Btn Css **/
+.box-btn {
+  font-size: 16px;
+  color: #ffffff;
+  padding: 12px 25px;
+  line-height: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: capitalize;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #008037;
+}
+
+.box-btn::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: #034b03;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+          transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+}
+
+.box-btn.border-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.box-btn:hover {
+  color: #fff;
+}
+
+.box-btn:hover::before {
+  -webkit-transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+          transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+/** Preloader Css **/
+.loader-content {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+.loader-content span {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: 3px solid #008037;
+  overflow: hidden;
+  -webkit-animation: spin 3s ease infinite;
+          animation: spin 3s ease infinite;
+  position: absolute;
+}
+
+.loader-content span::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 2em;
+  height: 2em;
+  background-color: #008037;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation: fill 3s linear infinite;
+          animation: fill 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  50%,
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  50%,
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fill {
+  25%,
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes fill {
+  25%,
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+.single-product {
+  position: relative;
+  padding: 15px;
+  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 20px;
+}
+
+.single-product h3 {
+  overflow: hidden;
+  display: block;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  margin-top: 10px;
+  color: #008037;
+}
+
+.single-product p {
+  overflow: hidden;
+  display: block;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+}
+
+.single-product h6 {
+  color: #008037;
+}
+
+.single-product .img {
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+}
+
+.single-product .img img {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.nodata img {
+  max-width: 40%;
+  margin: 0 auto;
+  display: block;
+}
+
+.nodata h3 {
+  text-align: center;
+  color: crimson;
+}
+/*# sourceMappingURL=index.css.map */
